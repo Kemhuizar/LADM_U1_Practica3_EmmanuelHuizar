@@ -66,7 +66,7 @@ class MainActivity : AppCompatActivity() {
     private fun insertarVector() {
         textView4.setText("")
         if(editText.text.isEmpty()||editText2.text.isEmpty()){
-            Toast.makeText(this,"Error todos los campos deben tener data", Toast.LENGTH_LONG).show()
+            mensaje("Error todos los campos deben tener data")
             return
         }
 
@@ -75,7 +75,8 @@ class MainActivity : AppCompatActivity() {
 
         vector[r]=v
 
-        Toast.makeText(this,"Se guardo el archivo", Toast.LENGTH_LONG).show()
+        mensaje("Se guardo el archivo")
+
         editText.setText("")
         editText2.setText("")
         editText.requestFocus()
